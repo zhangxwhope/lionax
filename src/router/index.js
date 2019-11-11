@@ -7,8 +7,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: () => import('@/components/HelloWorld')
+      name: 'Home',
+      component: () => import('@/views/home')
+    },
+    {
+      path: '/detail',
+      name: 'Detail',
+      component: () => import('@/views/detail')
     }
   ]
 })
