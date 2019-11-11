@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="cache-control" content="no-cache">
+		<meta name="description" content="">
+		<title>力耐|保养助手</title>
+		<link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/fonts/iconfont.css" />
+		<script>
+			(function(doc, win) {
+				var docEl = doc.documentElement,
+					dpr = 1,
+					scale = 1 / dpr;
+				var metaEl = doc.createElement('meta');
+				metaEl.name = "viewport";
+				metaEl.content = 'initial-scale=' + scale + ',maximum-scale=' + scale + ',minimum-scale=' + scale;
+				docEl.firstElementChild.appendChild(metaEl);
+				var recalc = function() {
+					var deviceWidth = docEl.clientWidth;
+					if(deviceWidth > 640) deviceWidth = 640;
+					docEl.style.fontSize = deviceWidth / 6.4 + 'px';
+				};
+				recalc();
+
+			})(document, window);
+		</script>
+	</head>
+
+	<body style="-webkit-text-size-adjust: 100% !important;">
+		<!--<img src="./images/maintenance/shell.png" alt="" style='display: none'>-->
+		<script id="authRequestFrame"></script>
+		<div data-v-7c1514bd="" data-v-49ba5764="" class="home">
+			<section data-v-7c1514bd="" style="">
+				<div data-v-7c1514bd="" class="mask" id="mask" style="display: none;"></div>
+				<!--<header data-v-7c1514bd="" class="header flex">
+					<div data-v-7c1514bd="" class="searchBox flex">
+						<i data-v-7c1514bd="" class="iconfont icon-sousuo font-13"></i>
+						<span data-v-7c1514bd="" class="font-13 color-gray9 searchMask">请输入17位VIN码或车辆名称</span>
+					</div>
+					<div data-v-7c1514bd="" class="feedback" id="feedback">
+						<i data-v-7c1514bd="" class="iconfont icon-yijianfankui1 font-16"></i>
+						<span data-v-7c1514bd="" class="font-9">反馈</span>
+					</div>
+				</header>-->
+				<div data-v-7c1514bd="" class="main">
+					<div data-v-7c1514bd="" class="content p-t-9">
+						<div data-v-7c1514bd="" class="hot">
+							<div data-v-7c1514bd="" class="font-16 color-gray2 title"><span data-v-7c1514bd="">热门品牌</span></div>
+							<div data-v-7c1514bd="" class="brand flex">
+								<div data-v-7c1514bd="" class="column flex">
+									<div data-v-7c1514bd="" class="hot-brand" onclick="changeDom(this)">
+										<div data-v-7c1514bd="">
+											<div data-v-7c1514bd="" class="brand-logo"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/大众.jpg" alt=""></div>
+											<div data-v-7c1514bd="" class="brand-name font-11 color-gray5">大众</div>
+										</div>
+									</div>
+									<div data-v-7c1514bd="" class="hot-brand" onclick="changeDom(this)">
+										<div data-v-7c1514bd="">
+											<div data-v-7c1514bd="" class="brand-logo"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/福特.jpg" alt=""></div>
+											<div data-v-7c1514bd="" class="brand-name font-11 color-gray5">福特</div>
+										</div>
+									</div>
+									<div data-v-7c1514bd="" class="hot-brand" onclick="changeDom(this)">
+										<div data-v-7c1514bd="">
+											<div data-v-7c1514bd="" class="brand-logo"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/斯柯达.jpg" alt=""></div>
+											<div data-v-7c1514bd="" class="brand-name font-11 color-gray5">斯柯达</div>
+										</div>
+									</div>
+									<div data-v-7c1514bd="" class="hot-brand">
+										<div data-v-7c1514bd="">
+											<div data-v-7c1514bd="" class="brand-logo"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/马自达.jpg" alt=""></div>
+											<div data-v-7c1514bd="" class="brand-name font-11 color-gray5">马自达</div>
+										</div>
+									</div>
+									<div data-v-7c1514bd="" class="hot-brand">
+										<div data-v-7c1514bd="">
+											<div data-v-7c1514bd="" class="brand-logo"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/别克.jpg" alt=""></div>
+											<div data-v-7c1514bd="" class="brand-name font-11 color-gray5">别克</div>
+										</div>
+									</div>
+								</div>
+								<div data-v-7c1514bd="" class="column flex">
+									<div data-v-7c1514bd="" class="hot-brand">
+										<div data-v-7c1514bd="">
+											<div data-v-7c1514bd="" class="brand-logo"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/雪佛兰.jpg" alt=""></div>
+											<div data-v-7c1514bd="" class="brand-name font-11 color-gray5">雪佛兰</div>
+										</div>
+									</div>
+									<div data-v-7c1514bd="" class="hot-brand">
+										<div data-v-7c1514bd="">
+											<div data-v-7c1514bd="" class="brand-logo"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/奥迪.jpg" alt=""></div>
+											<div data-v-7c1514bd="" class="brand-name font-11 color-gray5">奥迪</div>
+										</div>
+									</div>
+									<div data-v-7c1514bd="" class="hot-brand">
+										<div data-v-7c1514bd="">
+											<div data-v-7c1514bd="" class="brand-logo"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/奔驰.jpg" alt=""></div>
+											<div data-v-7c1514bd="" class="brand-name font-11 color-gray5">奔驰</div>
+										</div>
+									</div>
+									<div data-v-7c1514bd="" class="hot-brand">
+										<div data-v-7c1514bd="">
+											<div data-v-7c1514bd="" class="brand-logo"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/丰田.jpg" alt=""></div>
+											<div data-v-7c1514bd="" class="brand-name font-11 color-gray5">丰田</div>
+										</div>
+									</div>
+									<div data-v-7c1514bd="" class="hot-brand">
+										<div data-v-7c1514bd="">
+											<div data-v-7c1514bd="" class="brand-logo"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/日产.jpg" alt=""></div>
+											<div data-v-7c1514bd="" class="brand-name font-11 color-gray5">日产</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div data-v-7c1514bd="" class="brand-list">
+							<div data-v-7c1514bd="" id="anchor-0" class="brand-item">
+								<div data-v-7c1514bd="" class="item-title"><span data-v-7c1514bd="" class="font-16">A</span></div>
+								<div data-v-7c1514bd="" class="item-detail flex" onclick="changeDom(this)"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/奥迪.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">奥迪</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex" onclick="changeDom(this)"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/阿斯顿马丁.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">阿斯顿马丁</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex" onclick="changeDom(this)"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/安驰.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">安驰</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/阿尔法-罗密欧.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2 last-no-bd"><span data-v-7c1514bd="">阿尔法-罗密欧</span></div>
+								</div>
+							</div>
+							<div data-v-7c1514bd="" id="anchor-1" class="brand-item">
+								<div data-v-7c1514bd="" class="item-title"><span data-v-7c1514bd="" class="font-16">B</span></div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/宾利.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">宾利</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/巴博斯.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">巴博斯</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/本田.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">本田</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/标致.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">标致</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/别克.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">别克</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/宝马.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">宝马</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/奔驰.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">奔驰</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/保时捷.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">保时捷</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/北汽.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">北汽</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/奔腾.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">奔腾</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/宝龙.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">宝龙</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/北京.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">北京</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/比亚迪.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">比亚迪</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/宝骏.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">宝骏</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/宝沃.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">宝沃</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/比速.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2 last-no-bd"><span data-v-7c1514bd="">比速</span></div>
+								</div>
+							</div>
+							<div data-v-7c1514bd="" id="anchor-2" class="brand-item">
+								<div data-v-7c1514bd="" class="item-title"><span data-v-7c1514bd="" class="font-16">C</span></div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/长安.png">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">长安</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/昌河.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">昌河</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/长安商用.png">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">长安商用</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/传祺.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">传祺</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/长城.png">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2 last-no-bd"><span data-v-7c1514bd="">长城</span></div>
+								</div>
+							</div>
+							<div data-v-7c1514bd="" id="anchor-3" class="brand-item">
+								<div data-v-7c1514bd="" class="item-title"><span data-v-7c1514bd="" class="font-16">D</span></div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/大众.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">大众</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/道奇.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">道奇</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/DS.png">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">DS</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/大迪.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">大迪</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/东风小康.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">东风小康</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/大通.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">大通</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/东风.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">东风</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/帝豪.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">帝豪</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/大发.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">大发</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/东南.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">东南</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/东风风度.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2 last-no-bd"><span data-v-7c1514bd="">东风风度</span></div>
+								</div>
+							</div>
+							<div data-v-7c1514bd="" id="anchor-4" class="brand-item">
+								<div data-v-7c1514bd="" class="item-title"><span data-v-7c1514bd="" class="font-16">F</span></div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/法拉利.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">法拉利</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/福特.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">福特</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/菲亚特.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">菲亚特</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/丰田.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">丰田</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/福田.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">福田</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/风神.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">风神</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/风行.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">风行</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/福迪.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">福迪</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/富奇.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2 last-no-bd"><span data-v-7c1514bd="">富奇</span></div>
+								</div>
+							</div>
+							<div data-v-7c1514bd="" id="anchor-5" class="brand-item">
+								<div data-v-7c1514bd="" class="item-title"><span data-v-7c1514bd="" class="font-16">G</span></div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/观致.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2 last-no-bd"><span data-v-7c1514bd="">观致</span></div>
+								</div>
+							</div>
+							<div data-v-7c1514bd="" id="anchor-6" class="brand-item">
+								<div data-v-7c1514bd="" class="item-title"><span data-v-7c1514bd="" class="font-16">H</span></div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/黑豹.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">黑豹</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/哈飞.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">哈飞</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/黄海.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">黄海</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/海马.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">海马</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/华普.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">华普</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/红旗.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">红旗</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/华泰.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">华泰</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/汇众.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">汇众</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/华北.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">华北</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/哈弗.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">哈弗</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/恒天.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">恒天</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/海格.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">海格</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/华阳.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">华阳</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/幻速.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">幻速</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/华颂.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">华颂</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/汉腾.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2 last-no-bd"><span data-v-7c1514bd="">汉腾</span></div>
+								</div>
+							</div>
+							<div data-v-7c1514bd="" id="anchor-7" class="brand-item">
+								<div data-v-7c1514bd="" class="item-title"><span data-v-7c1514bd="" class="font-16">J</span></div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/捷豹.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">捷豹</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/Jeep.png">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">Jeep</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/吉利.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">吉利</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/吉奥.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">吉奥</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/金杯.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">金杯</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/江淮.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">江淮</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/江铃.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">江铃</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/江南.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">江南</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/佳星.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">佳星</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/金程.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">金程</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/九龙.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2 last-no-bd"><span data-v-7c1514bd="">九龙</span></div>
+								</div>
+							</div>
+							<div data-v-7c1514bd="" id="anchor-8" class="brand-item">
+								<div data-v-7c1514bd="" class="item-title"><span data-v-7c1514bd="" class="font-16">K</span></div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/克莱斯勒.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">克莱斯勒</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/凯迪拉克.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">凯迪拉克</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/开瑞.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">开瑞</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/卡威.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">卡威</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/凯翼.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2 last-no-bd"><span data-v-7c1514bd="">凯翼</span></div>
+								</div>
+							</div>
+							<div data-v-7c1514bd="" id="anchor-9" class="brand-item">
+								<div data-v-7c1514bd="" class="item-title"><span data-v-7c1514bd="" class="font-16">L</span></div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/劳斯莱斯.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">劳斯莱斯</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/路虎.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">路虎</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/兰博基尼.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">兰博基尼</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/路特斯.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">路特斯</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/铃木.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">铃木</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/雷诺.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">雷诺</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/林肯.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">林肯</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/雷克萨斯.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">雷克萨斯</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/猎豹.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">猎豹</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/理念.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">理念</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/力帆.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">力帆</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/莲花.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">莲花</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/陆风.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2 last-no-bd"><span data-v-7c1514bd="">陆风</span></div>
+								</div>
+							</div>
+							<div data-v-7c1514bd="" id="anchor-10" class="brand-item">
+								<div data-v-7c1514bd="" class="item-title"><span data-v-7c1514bd="" class="font-16">M</span></div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/玛莎拉蒂.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">玛莎拉蒂</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/马自达.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">马自达</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/迈凯伦.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">迈凯伦</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/MINI.png">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">MINI</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/MG.png">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">MG</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/美亚.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2 last-no-bd"><span data-v-7c1514bd="">美亚</span></div>
+								</div>
+							</div>
+							<div data-v-7c1514bd="" id="anchor-11" class="brand-item">
+								<div data-v-7c1514bd="" class="item-title"><span data-v-7c1514bd="" class="font-16">N</span></div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/纳智捷.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2 last-no-bd"><span data-v-7c1514bd="">纳智捷</span></div>
+								</div>
+							</div>
+							<div data-v-7c1514bd="" id="anchor-12" class="brand-item">
+								<div data-v-7c1514bd="" class="item-title"><span data-v-7c1514bd="" class="font-16">O</span></div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/讴歌.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">讴歌</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/欧宝.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">欧宝</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/欧朗.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2 last-no-bd"><span data-v-7c1514bd="">欧朗</span></div>
+								</div>
+							</div>
+							<div data-v-7c1514bd="" id="anchor-13" class="brand-item">
+								<div data-v-7c1514bd="" class="item-title"><span data-v-7c1514bd="" class="font-16">Q</span></div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/起亚.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">起亚</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/启辰.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">启辰</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/全球鹰.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">全球鹰</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/奇瑞.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">奇瑞</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/庆铃.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">庆铃</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/启腾.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2 last-no-bd"><span data-v-7c1514bd="">启腾</span></div>
+								</div>
+							</div>
+							<div data-v-7c1514bd="" id="anchor-14" class="brand-item">
+								<div data-v-7c1514bd="" class="item-title"><span data-v-7c1514bd="" class="font-16">R</span></div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/RUF.png">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">RUF</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/日产.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">日产</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/瑞麒.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">瑞麒</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/荣威.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2 last-no-bd"><span data-v-7c1514bd="">荣威</span></div>
+								</div>
+							</div>
+							<div data-v-7c1514bd="" id="anchor-15" class="brand-item">
+								<div data-v-7c1514bd="" class="item-title"><span data-v-7c1514bd="" class="font-16">S</span></div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/斯巴鲁.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">斯巴鲁</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/Smart.png">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">Smart</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/三菱.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">三菱</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/斯柯达.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">斯柯达</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/双龙.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">双龙</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/思铭.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">思铭</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/SPRINGO.png">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">SPRINGO</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/双环.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">双环</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/绅宝.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">绅宝</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/陕汽通家.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">陕汽通家</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/赛宝.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">赛宝</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/斯威.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2 last-no-bd"><span data-v-7c1514bd="">斯威</span></div>
+								</div>
+							</div>
+							<div data-v-7c1514bd="" id="anchor-16" class="brand-item">
+								<div data-v-7c1514bd="" class="item-title"><span data-v-7c1514bd="" class="font-16">T</span></div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/特斯拉.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">特斯拉</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/通用.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">通用</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/通田.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">通田</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/天马.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">天马</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/腾势.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2 last-no-bd"><span data-v-7c1514bd="">腾势</span></div>
+								</div>
+							</div>
+							<div data-v-7c1514bd="" id="anchor-17" class="brand-item">
+								<div data-v-7c1514bd="" class="item-title"><span data-v-7c1514bd="" class="font-16">W</span></div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/威兹曼.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">威兹曼</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/沃尔沃.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">沃尔沃</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/威旺.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">威旺</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/威麟.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">威麟</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/万丰.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">万丰</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/五菱.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">五菱</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/五十铃.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">五十铃</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/WEY.png">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2 last-no-bd"><span data-v-7c1514bd="">WEY</span></div>
+								</div>
+							</div>
+							<div data-v-7c1514bd="" id="anchor-18" class="brand-item">
+								<div data-v-7c1514bd="" class="item-title"><span data-v-7c1514bd="" class="font-16">X</span></div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/西雅特.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">西雅特</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/现代.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">现代</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/雪佛兰.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">雪佛兰</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/雪铁龙.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">雪铁龙</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/新雅途.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">新雅途</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/夏利.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">夏利</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/新凯.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">新凯</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/西安奥拓.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2 last-no-bd"><span data-v-7c1514bd="">西安奥拓</span></div>
+								</div>
+							</div>
+							<div data-v-7c1514bd="" id="anchor-19" class="brand-item">
+								<div data-v-7c1514bd="" class="item-title"><span data-v-7c1514bd="" class="font-16">Y</span></div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/英菲尼迪.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">英菲尼迪</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/一汽.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">一汽</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/英伦.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">英伦</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/野马.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">野马</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/云雀.png">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">云雀</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/永源.png">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">永源</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/依维柯.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">依维柯</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/扬子.jpg">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">扬子</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/英致.png">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2 last-no-bd"><span data-v-7c1514bd="">英致</span></div>
+								</div>
+							</div>
+							<div data-v-7c1514bd="" id="anchor-20" class="brand-item">
+								<div data-v-7c1514bd="" class="item-title"><span data-v-7c1514bd="" class="font-16">Z</span></div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/中华.png">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">中华</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/中顺.png">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">中顺</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/众泰.png">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">众泰</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/中兴.png">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">中兴</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/中欧.png">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">中欧</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/知豆.png">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2"><span data-v-7c1514bd="">知豆</span></div>
+								</div>
+								<div data-v-7c1514bd="" class="item-detail flex"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/之诺.png">
+									<div data-v-7c1514bd="" class="name font-13 color-gray2 last-no-bd"><span data-v-7c1514bd="">之诺</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-v-7c1514bd="" class="nav-bar" style="">
+					<div data-v-7c1514bd="" class="nav-item ">
+						<div data-v-7c1514bd="" class="bubble font-20">A</div>
+						<div data-v-7c1514bd="" class="indexes font-9"><span data-v-7c1514bd="">A</span></div>
+					</div>
+					<div data-v-7c1514bd="" class="nav-item ">
+						<div data-v-7c1514bd="" class="bubble font-20">B</div>
+						<div data-v-7c1514bd="" class="indexes font-9"><span data-v-7c1514bd="">B</span></div>
+					</div>
+					<div data-v-7c1514bd="" class="nav-item ">
+						<div data-v-7c1514bd="" class="bubble font-20">C</div>
+						<div data-v-7c1514bd="" class="indexes font-9"><span data-v-7c1514bd="">C</span></div>
+					</div>
+					<div data-v-7c1514bd="" class="nav-item ">
+						<div data-v-7c1514bd="" class="bubble font-20">D</div>
+						<div data-v-7c1514bd="" class="indexes font-9"><span data-v-7c1514bd="">D</span></div>
+					</div>
+					<div data-v-7c1514bd="" class="nav-item ">
+						<div data-v-7c1514bd="" class="bubble font-20">F</div>
+						<div data-v-7c1514bd="" class="indexes font-9"><span data-v-7c1514bd="">F</span></div>
+					</div>
+					<div data-v-7c1514bd="" class="nav-item ">
+						<div data-v-7c1514bd="" class="bubble font-20">G</div>
+						<div data-v-7c1514bd="" class="indexes font-9"><span data-v-7c1514bd="">G</span></div>
+					</div>
+					<div data-v-7c1514bd="" class="nav-item ">
+						<div data-v-7c1514bd="" class="bubble font-20">H</div>
+						<div data-v-7c1514bd="" class="indexes font-9"><span data-v-7c1514bd="">H</span></div>
+					</div>
+					<div data-v-7c1514bd="" class="nav-item ">
+						<div data-v-7c1514bd="" class="bubble font-20">J</div>
+						<div data-v-7c1514bd="" class="indexes font-9"><span data-v-7c1514bd="">J</span></div>
+					</div>
+					<div data-v-7c1514bd="" class="nav-item ">
+						<div data-v-7c1514bd="" class="bubble font-20">K</div>
+						<div data-v-7c1514bd="" class="indexes font-9"><span data-v-7c1514bd="">K</span></div>
+					</div>
+					<div data-v-7c1514bd="" class="nav-item ">
+						<div data-v-7c1514bd="" class="bubble font-20">L</div>
+						<div data-v-7c1514bd="" class="indexes font-9"><span data-v-7c1514bd="">L</span></div>
+					</div>
+					<div data-v-7c1514bd="" class="nav-item ">
+						<div data-v-7c1514bd="" class="bubble font-20">M</div>
+						<div data-v-7c1514bd="" class="indexes font-9"><span data-v-7c1514bd="">M</span></div>
+					</div>
+					<div data-v-7c1514bd="" class="nav-item ">
+						<div data-v-7c1514bd="" class="bubble font-20">N</div>
+						<div data-v-7c1514bd="" class="indexes font-9"><span data-v-7c1514bd="">N</span></div>
+					</div>
+					<div data-v-7c1514bd="" class="nav-item ">
+						<div data-v-7c1514bd="" class="bubble font-20">O</div>
+						<div data-v-7c1514bd="" class="indexes font-9"><span data-v-7c1514bd="">O</span></div>
+					</div>
+					<div data-v-7c1514bd="" class="nav-item ">
+						<div data-v-7c1514bd="" class="bubble font-20">Q</div>
+						<div data-v-7c1514bd="" class="indexes font-9"><span data-v-7c1514bd="">Q</span></div>
+					</div>
+					<div data-v-7c1514bd="" class="nav-item ">
+						<div data-v-7c1514bd="" class="bubble font-20">R</div>
+						<div data-v-7c1514bd="" class="indexes font-9"><span data-v-7c1514bd="">R</span></div>
+					</div>
+					<div data-v-7c1514bd="" class="nav-item ">
+						<div data-v-7c1514bd="" class="bubble font-20">S</div>
+						<div data-v-7c1514bd="" class="indexes font-9"><span data-v-7c1514bd="">S</span></div>
+					</div>
+					<div data-v-7c1514bd="" class="nav-item ">
+						<div data-v-7c1514bd="" class="bubble font-20">T</div>
+						<div data-v-7c1514bd="" class="indexes font-9"><span data-v-7c1514bd="">T</span></div>
+					</div>
+					<div data-v-7c1514bd="" class="nav-item ">
+						<div data-v-7c1514bd="" class="bubble font-20">W</div>
+						<div data-v-7c1514bd="" class="indexes font-9"><span data-v-7c1514bd="">W</span></div>
+					</div>
+					<div data-v-7c1514bd="" class="nav-item ">
+						<div data-v-7c1514bd="" class="bubble font-20">X</div>
+						<div data-v-7c1514bd="" class="indexes font-9"><span data-v-7c1514bd="">X</span></div>
+					</div>
+					<div data-v-7c1514bd="" class="nav-item ">
+						<div data-v-7c1514bd="" class="bubble font-20">Y</div>
+						<div data-v-7c1514bd="" class="indexes font-9"><span data-v-7c1514bd="">Y</span></div>
+					</div>
+					<div data-v-7c1514bd="" class="nav-item ">
+						<div data-v-7c1514bd="" class="bubble font-20">Z</div>
+						<div data-v-7c1514bd="" class="indexes font-9"><span data-v-7c1514bd="">Z</span></div>
+					</div>
+				</div>
+		</section>
+			<div data-v-9b521402="" data-v-7c1514bd="" class="default-page" style="display: none;">
+				<div data-v-9b521402="">
+					<div data-v-9b521402="" class="img"><img data-v-9b521402="" src="img/vcy_pic_wuneirong-1117d.png"></div>
+					<div data-v-9b521402="" class="message">
+						<div data-v-9b521402="" class="title">暂无内容</div>
+						<div data-v-9b521402="" class="tip">当前列表暂无数据</div>
+						<div data-v-9b521402="" class="tip">The current list has no data</div>
+					</div>
+				</div>
+			</div>
+			<div data-v-7c1514bd="" class="changeTime height0" id="changeTime">
+				<div data-v-7c1514bd="" class="car-name font-11 flex">
+					<div data-v-7c1514bd="" class="left flex">
+						<img data-v-7c1514bd="" alt="" src="https://upkeep-product.vchangyi.com/images/brandLogo/大众.jpg">
+						<div data-v-7c1514bd="" class="color-gray5 text" onclick="backList()">大众</div>
+					</div>
+					<i data-v-7c1514bd="" id="close" class="close iconfont icon-guanbi font-10 color-grayC"></i>
+				</div>
+				<div data-v-7c1514bd="" class="car-time font-14 color-gray2">
+					<div data-v-7c1514bd="" class="time-item flex" onclick="changeItem(this)"><span data-v-7c1514bd="">B8 Alltrack [蔚揽]</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex" onclick="changeItem(this)"><span data-v-7c1514bd="">B8 Variant [蔚揽]</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex" onclick="changeItem(this)"><span data-v-7c1514bd="">Beetle Cabrio [甲壳虫 敞篷]</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex" onclick="changeItem(this)"><span data-v-7c1514bd="">Beetle R-Line [甲壳虫 R-Line]</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">Beetle [甲壳虫]</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">CC</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">CC R-Line</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">Caravelle [凯路威]</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">Cross Golf</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">Cross POLO</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">Cross up!</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">Cross桑塔纳</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">Eos</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">Golf Cabriolet [高尔夫 敞篷车]</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">Golf GTE</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">Golf GTI Cabriolet</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">Golf R</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">Golf R Cabriolet</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">Golf R Variant</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">Golf R32</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">Golf Sportsvan</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">Golf Variant [高尔夫 旅行车]</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">Magotan Alltrack [迈腾 旅行车]</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">Magotan Variant [迈腾 旅行车]</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">Magotan [迈腾]</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">Multivan [迈特威]</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">POLO</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">POLO GTI</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">POLO 劲取</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">POLO 劲情</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">POLO-三厢</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">Phaeton [辉腾]</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">Scirocco GTS [尚酷 GTS]</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">Scirocco R [尚酷 R]</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">Scirocco R-Line [尚酷 R-Line]</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">Scirocco [尚酷]</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">Sharan [夏朗]</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">Tiguan [途欢]</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">Touareg Hybrid [途锐 油电混合]</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">Touareg R-Line [途锐 R-Line]</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">Touareg X [途锐 X]</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">Touareg [途锐]</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">electric up!</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">up!</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">凌渡</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">凌渡GTS</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">宝来</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">宝来HS-两厢</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">宝来经典</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">帕萨特</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">帕萨特 领驭</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">开迪</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">捷达</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">捷达王</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">朗境</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">朗行</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">朗逸</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">朗逸经典</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">桑塔纳</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">桑塔纳 志俊</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">桑塔纳 旅行车</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">桑塔纳2000</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">桑塔纳3000</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">桑塔纳·尚纳</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">桑塔纳·浩纳</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">蔚领</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">辉昂</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">迈腾</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">途安</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">途安L</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">途昂</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">途观</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">途观L</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">速腾</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">速腾GLI</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">速腾R-Line</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">高尔</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">高尔夫4</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">高尔夫6</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">高尔夫7</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">高尔夫7 R-Line</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">高尔夫GTI</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+					<div data-v-7c1514bd="" class="time-item flex"><span data-v-7c1514bd="">高尔夫·嘉旅</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>
+				</div>
+			</div>
+			<div data-v-7c1514bd="" class="searchPage opacity" style="display: none;">
+				<div data-v-7c1514bd="" class="search-default font-13 color-gray9">
+					<div data-v-7c1514bd="" class="searchBox">
+						<i data-v-7c1514bd="" class="back iconfont icon-arrows-left font-10"></i>
+						<div data-v-7c1514bd="" class="search flex">
+							<div data-v-7c1514bd="" class="search-icon "><i data-v-7c1514bd="" class="iconfont icon-search font-11"></i></div> 
+							<input data-v-7c1514bd="" id="input" type="text" placeholder="请输入17位VIN码或车辆名称" class="font-13 color-gray2"> 
+							<i data-v-7c1514bd="" class="iconfont icon-guanbi1 font-13 empty"></i>
+						</div> 
+						<span data-v-7c1514bd="" class="startSearch">搜索</span>
+					</div>
+					<div data-v-7c1514bd="" class="result" style="display: none;">
+						<ul data-v-7c1514bd="">
+							<li data-v-7c1514bd="" class="font-14 flex color-gray2">
+								<div data-v-7c1514bd="" class="img">
+									<img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/大众.jpg">
+								</div> 
+								<span data-v-7c1514bd="">大众</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script>
+			$(function() {
+				$(".loadMask").show();
+				setTimeout(function(){
+					$(".loadMask").hide();
+				},500);
+			});
+			// 点击反馈
+			document.getElementById("feedback").onclick = function() {
+				$(".loadMask").show();
+				setTimeout(function(){
+					$(".loadMask").hide();
+					window.location.href = 'feedback.html';
+				},500)
+			};
+			//点击搜索
+			$(".searchMask").click(function(){
+				$(".searchPage").show();
+			});
+			//点击搜索框的返回按钮
+			$(".back").click(function(){
+				$(".searchPage").hide();
+			});
+			//点击搜索框的清空按钮
+			$(".empty").click(function(){
+				$("#input").val('');
+			});
+			//点击搜索按钮
+			$(".startSearch").click(function(){
+				//获取到input框输入的值
+				var inputValue=$("#input").val();
+				if(inputValue != '' && inputValue != null && inputValue !== undefined){
+					$(".result").show();
+					$(".result ul").empty();
+					var str='';
+					for (var i=0;i<5;i++) {
+						str+='<li data-v-7c1514bd="" class="font-14 flex color-gray2" onclick="clickDetail(this)"><div data-v-7c1514bd="" class="img"><img data-v-7c1514bd="" src="https://upkeep-product.vchangyi.com/images/brandLogo/大众.jpg"></div> <span data-v-7c1514bd="">大众</span></li>';
+					}
+					$(".result ul").append(str);
+				}else{
+					alert("请输入17位VIN码或车辆名称");
+				}
+				
+			});
+			//点击搜索出现后的产品
+			function clickDetail(dom){
+				$(".searchPage").hide();
+				document.getElementById('mask').style.setProperty('display', 'block');
+				$('#changeTime').removeClass("height0");
+			};
+			//点击热门品牌
+			function changeDom(dom) {
+				$(".loadMask").show();
+				setTimeout(function(){
+					$(".loadMask").hide();
+					document.getElementById('mask').style.setProperty('display', 'block');
+					$('#changeTime').removeClass("height0");
+				},500)
+			};
+			//点击阴影
+			// 点击弹框选择类型
+			function changeItem(dom) {
+				$('.car-name .left').empty();
+				$('.car-time').empty();
+				var str1 = '';
+				str1 += '<div data-v-7c1514bd="" class="left flex"><img data-v-7c1514bd="" alt="" src="https://upkeep-product.vchangyi.com/images/brandLogo/大众.jpg"> <!----> <div data-v-7c1514bd=""><span data-v-7c1514bd="" class="ddid21 text">大众</span><i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i><span data-v-7c1514bd="" class="color-gray5">B8 Alltrack [蔚揽]</span></div> <!----></div>';
+				var str2 = '';
+				str2 += '<div data-v-7c1514bd="" class="time-item flex tiao"><span data-v-7c1514bd="">2.0TSI 双离合 380TSI 四驱拓行版</span> <i data-v-7c1514bd="" class="iconfont icon-arrows-right font-10 color-grayC"></i></div>';
+				$('.car-name .left').append(str1);
+				$('.car-time').append(str2);
+				$(".tiao").click(function() {
+					$(".loadMask").show();
+					setTimeout(function(){
+						$(".loadMask").hide();
+						window.location.href = 'recommend.html'
+					},500)
+				});
+			}
+			// 点击关闭
+			document.getElementById('close').onclick = function() {
+				document.getElementById('mask').style.setProperty('display', 'none');
+				$('#changeTime').addClass("height0");
+			}
+			// 获取距离顶部的高度
+			var Winds = $(window).height();
+			$(window).scroll(function() {
+				$(".brand-list .brand-item").each(function() {
+					var k = parseInt($(this).offset().top - $(window).scrollTop());
+					var _index = $(this).index();
+					if(k < 0) {
+						$('.nav-bar .nav-item').removeClass('active');
+						$(".nav-bar .nav-item").eq(_index).addClass("active");
+					} //如果到达页面底部，给左侧导航最后一个加active
+					else if($(document).height() == $(window).scrollTop() + $(window).height()) {
+						$('.nav-bar .nav-item').removeClass('active');
+						$('.nav-bar .nav-item').eq($('.brand-list .brand-item').length - 1).addClass('active');
+					}
+				});
+			});
+			// 点击字母找到对应内容
+			$('.nav-bar .nav-item').click(function() {
+				$(this).addClass('active').siblings().removeClass('active');
+				var _i = $(this).index();
+				$('body, html').animate({
+					scrollTop: $('.brand-list .brand-item').eq(_i).offset().top - 80
+				}, 500);
+			});
+			(function() {
+
+				if(typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+
+					handleFontSize();
+
+				} else {
+					if(document.addEventListener) {
+
+						document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+
+					} else if(document.attachEvent) {
+
+						document.attachEvent("WeixinJSBridgeReady", handleFontSize);
+
+						document.attachEvent("onWeixinJSBridgeReady", handleFontSize);
+
+					}
+
+				}
+
+				function handleFontSize() {
+
+					// 设置网页字体为默认大小
+					WeixinJSBridge.invoke('setFontSizeCallback', {
+
+						'fontSize': 0
+
+					});
+
+					// 重写设置网页字体大小的事件
+					WeixinJSBridge.on('menu:setfont', function() {
+
+						WeixinJSBridge.invoke('setFontSizeCallback', {
+
+							'fontSize': 0
+
+						});
+
+					});
+
+				}
+			})();
+		</script>
+		<script type="text/javascript" src="js/vendors.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		<div class="loadMask" style="display: none;">
+			<div class="mask-layer"></div>
+			<div class="loading-center">
+				<div class="loading-animation">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+					<div class="bar4"></div>
+					<div class="bar5"></div>
+					<div class="bar6"></div>
+					<div class="bar7"></div>
+					<div class="bar8"></div>
+					<div class="bar9"></div>
+					<div class="bar10"></div>
+					<div class="bar11"></div>
+					<div class="bar12"></div>
+				</div>
+				<div class="loading-message">加载中...</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>

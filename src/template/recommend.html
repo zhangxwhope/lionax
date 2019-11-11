@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="utf-8">
+		<script>
+			(function(doc, win) {
+				var docEl = doc.documentElement,
+					dpr = 1,
+					scale = 1 / dpr;
+				var metaEl = doc.createElement('meta');
+				metaEl.name = "viewport";
+				metaEl.content = 'initial-scale=' + scale + ',maximum-scale=' + scale + ',minimum-scale=' + scale;
+				docEl.firstElementChild.appendChild(metaEl);
+				var recalc = function() {
+					var deviceWidth = docEl.clientWidth;
+					if(deviceWidth > 640) deviceWidth = 640;
+					docEl.style.fontSize = deviceWidth / 6.4 + 'px';
+				};
+				recalc();
+
+			})(document, window);
+		</script>
+		<meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1">
+		<link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="cache-control" content="no-cache">
+		<title>壳牌|保养助手2.0</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/fonts/iconfont.css" />
+		<meta name="description" content="">
+	</head>
+
+	<body style="-webkit-text-size-adjust: 100% !important;">
+		<!--<img src="./images/maintenance/shell.png" alt="" style='display: none'>-->
+		<script id="authRequestFrame"></script>
+		<div data-v-faf2acba="" data-v-49ba5764="" class="maintenance-recommend">
+			<section data-v-faf2acba="">
+				<header data-v-faf2acba="" class="header">
+					<div data-v-faf2acba="" class="top flex ">
+						<div data-v-faf2acba="" class="title flex"><span data-v-faf2acba="" class="font-15">大众-B8 Alltrack [蔚揽]</span> <i data-v-faf2acba="" class="iconfont icon-arrows-right font-10"></i></div>
+						<div data-v-faf2acba="" class="feedback" id="config"><i data-v-faf2acba="" class="iconfont icon-shezhi1 font-16"></i> <span data-v-faf2acba="" class="font-8">车辆配置</span></div>
+					</div>
+				</header>
+				<div data-v-faf2acba="" class="main">
+					<section data-v-faf2acba="" class="recommend">
+						<div data-v-faf2acba="">
+							<header data-v-faf2acba="" class="flex">
+								<div data-v-faf2acba="" class="title font-14">机油推荐</div>
+								<!---->
+							</header>
+							<div data-v-faf2acba="" class="content flex recomendList">
+								<div data-v-faf2acba="" class="item"><img data-v-faf2acba="" src="https://upkeep-parts.vchangyi.com/images\engineOil/超凡-5W-30-4L.png" alt="">
+									<p data-v-faf2acba="" class="font-12 color-gray2">壳牌超凡喜力 ECT C3 5W-30</p>
+								</div>
+								<div data-v-faf2acba="" class="item"><img data-v-faf2acba="" src="https://upkeep-parts.vchangyi.com/images\engineOil/极净超凡-0W-30-4L.png" alt="">
+									<p data-v-faf2acba="" class="font-12 color-gray2"><span data-v-faf2acba="" class="chiji font-10 flex">最佳</span>壳牌极净超凡喜力 ECT C2/C3 0W-30</p>
+								</div>
+							</div>
+							<div data-v-faf2acba="" class="content flex recomendList">
+								<div data-v-faf2acba="" class="item"><img data-v-faf2acba="" src="https://upkeep-parts.vchangyi.com/images\engineOil/超凡-5W-30-4L.png" alt="">
+									<p data-v-faf2acba="" class="font-12 color-gray2">壳牌超凡喜力 ECT C3 5W-30</p>
+								</div>
+								<div data-v-faf2acba="" class="item"><img data-v-faf2acba="" src="https://upkeep-parts.vchangyi.com/images\engineOil/极净超凡-0W-30-4L.png" alt="">
+									<p data-v-faf2acba="" class="font-12 color-gray2"><span data-v-faf2acba="" class="chiji font-10 flex">最佳</span>壳牌极净超凡喜力 ECT C2/C3 0W-30</p>
+								</div>
+							</div>
+						</div>
+						<!---->
+					</section>
+				</div>
+			</section>
+			<div data-v-9b521402="" data-v-faf2acba="" class="default-page" style="display: none;">
+				<div data-v-9b521402="">
+					<div data-v-9b521402="" class="img"><img data-v-9b521402="" src="images/vcy_pic_wuneirong-1117d.png"></div>
+					<div data-v-9b521402="" class="message">
+						<div data-v-9b521402="" class="title">暂无内容</div>
+						<div data-v-9b521402="" class="tip">当前列表暂无数据</div>
+						<div data-v-9b521402="" class="tip">The current list has no data</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+		<script>
+			// 点击车辆配置
+			// 点击反馈
+			document.getElementById("config").onclick = function() {
+				$(".loadMask").show();
+				setTimeout(function(){
+					$(".loadMask").hide();
+					window.location.href = 'configuration.html'
+				},500)
+			};
+			(function() {
+
+				if(typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+
+					handleFontSize();
+
+				} else {
+					if(document.addEventListener) {
+
+						document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+
+					} else if(document.attachEvent) {
+
+						document.attachEvent("WeixinJSBridgeReady", handleFontSize);
+
+						document.attachEvent("onWeixinJSBridgeReady", handleFontSize);
+
+					}
+
+				}
+
+				function handleFontSize() {
+
+					// 设置网页字体为默认大小
+					WeixinJSBridge.invoke('setFontSizeCallback', {
+
+						'fontSize': 0
+
+					});
+
+					// 重写设置网页字体大小的事件
+					WeixinJSBridge.on('menu:setfont', function() {
+
+						WeixinJSBridge.invoke('setFontSizeCallback', {
+
+							'fontSize': 0
+
+						});
+
+					});
+
+				}
+			})();
+		</script>
+		<div class="loadMask" style="display: none;">
+			<div class="mask-layer"></div>
+			<div class="loading-center">
+				<div class="loading-animation">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+					<div class="bar4"></div>
+					<div class="bar5"></div>
+					<div class="bar6"></div>
+					<div class="bar7"></div>
+					<div class="bar8"></div>
+					<div class="bar9"></div>
+					<div class="bar10"></div>
+					<div class="bar11"></div>
+					<div class="bar12"></div>
+				</div>
+				<div class="loading-message">加载中...</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>

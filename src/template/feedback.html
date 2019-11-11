@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="cache-control" content="no-cache">
+		<meta name="description" content="">
+		<title>壳牌|保养助手2.0</title>
+		<link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="css/feedback.css" />
+		<link rel="stylesheet" href="css/fonts/iconfont.css" />
+		<script>
+			(function(doc, win) {
+				var docEl = doc.documentElement,
+					dpr = 1,
+					scale = 1 / dpr;
+				var metaEl = doc.createElement('meta');
+				metaEl.name = "viewport";
+				metaEl.content = 'initial-scale=' + scale + ',maximum-scale=' + scale + ',minimum-scale=' + scale;
+				docEl.firstElementChild.appendChild(metaEl);
+				var recalc = function() {
+					var deviceWidth = docEl.clientWidth;
+					if(deviceWidth > 640) deviceWidth = 640;
+					docEl.style.fontSize = deviceWidth / 6.4 + 'px';
+				};
+				recalc();
+
+			})(document, window);
+		</script>
+	</head>
+
+	<body style="-webkit-text-size-adjust: 100% !important;">
+		<!--<img src="./images/maintenance/shell.png" alt="" style='display: none'>-->
+		<script id="authRequestFrame"></script>
+		<div data-v-37c09106="" data-v-49ba5764="" class="maintenance-feedback">
+			<header data-v-37c09106=""><img data-v-37c09106="" src="img/feedback-2bb31.png" alt="">
+				<p data-v-37c09106="" class="title-cn font-18 color-gray0">提交反馈</p>
+				<p data-v-37c09106="" class="title-en font-12 color-gray9">Submit the feedback</p>
+			</header>
+			<section data-v-37c09106="">
+				<div data-v-37c09106="" class="feedback-content">
+					<p data-v-37c09106=""><span data-v-37c09106="" class="title-cn font-12 color-gray2">反馈内容</span> <span data-v-37c09106="" class="title-en font-10 color-gray9">Contact The Manuscript</span></p>
+					<div data-v-37c09106="" class="input"><textarea data-v-37c09106="" type="text" placeholder="请输入" class="font-14 color-gray2" style="max-height: 1.35rem; overflow: auto;"></textarea></div>
+				</div>
+				<div data-v-37c09106="" class="feedback-img">
+					<p data-v-37c09106="">
+						<span data-v-37c09106="" class="title-cn font-12 color-gray2">图片上传</span> 
+						<span data-v-37c09106="" class="title-en font-10 color-gray9">Image upload</span>
+					</p>
+					<div data-v-37c09106="" class="imgbox">
+						<div data-v-37c09106="" class="upload" style="display: none;">
+							<i data-v-37c09106="" class="iconfont add_line color-gray9"></i>
+						</div>
+						<div data-v-37c09106="" class="upload" id="uploads"></div>
+					</div>
+				</div>
+			</section>
+			<footer data-v-37c09106="">
+				<div data-v-37c09106="" class="submit">提交</div>
+			</footer>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+		<script type="text/javascript" src="js/upload.js" ></script>
+		<script>
+			$(function () {
+	     });
+	     var dragImgUpload = new DragImgUpload("#uploads",{
+	        callback:function (files) {
+	            //回调函数，可以传递给后台等等
+	            var file = files[0];
+	            console.log(file.name);
+	        }
+	    })
+	       //点击提交
+	       $(".submit").click(function(){
+	       	//获取输入的数据
+		       	var values=$(".input textarea").val();
+		       	if(values != '' && values != null && values !== undefined){
+		       		$("#toast").removeClass("v-toast-error");
+		       		$("#toast").addClass("v-toast-success");
+		       		$("#toast").text("提交成功");
+		       		$("#toast").show();
+			       	setTimeout(function(){
+			       		window.location.href = 'index.html'
+			       	},400);
+		       	}else{
+			       	$("#toast").show();
+			       	setTimeout(function(){
+			       		$("#toast").hide();
+			       	},1000);
+		       	}
+	       });
+			(function() {
+
+				if(typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+
+					handleFontSize();
+
+				} else {
+					if(document.addEventListener) {
+
+						document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+
+					} else if(document.attachEvent) {
+
+						document.attachEvent("WeixinJSBridgeReady", handleFontSize);
+
+						document.attachEvent("onWeixinJSBridgeReady", handleFontSize);
+
+					}
+
+				}
+
+				function handleFontSize() {
+
+					// 设置网页字体为默认大小
+					WeixinJSBridge.invoke('setFontSizeCallback', {
+
+						'fontSize': 0
+
+					});
+
+					// 重写设置网页字体大小的事件
+					WeixinJSBridge.on('menu:setfont', function() {
+
+						WeixinJSBridge.invoke('setFontSizeCallback', {
+
+							'fontSize': 0
+
+						});
+
+					});
+
+				}
+			})();
+		</script>
+		<div style="display: none;">
+			<div class="mask-layer"></div>
+			<div class="loading-center">
+				<div class="loading-animation">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+					<div class="bar4"></div>
+					<div class="bar5"></div>
+					<div class="bar6"></div>
+					<div class="bar7"></div>
+					<div class="bar8"></div>
+					<div class="bar9"></div>
+					<div class="bar10"></div>
+					<div class="bar11"></div>
+					<div class="bar12"></div>
+				</div>
+				<div class="loading-message">加载中...</div>
+			</div>
+		</div>
+
+		<div class="hidebox" style="word-break: break-all; display: none; background: red; width: 441.492px; font-size: 18px; font-family: monospace; line-height: 25.6594px; padding-left: 0.05rem;"></div>
+		<div class="hidebox2" style="display: none; height: 25.6563px;"></div>
+		<div class="hidebox" style="word-break: break-all; display: none; background: red; width: 441.492px; font-size: 18px; font-family: monospace; line-height: 25.6594px; padding-left: 0.05rem;"></div>
+		<div class="hidebox2" style="display: none; height: 25.6563px;"></div>
+		<div class="hidebox" style="word-break: break-all; display: none; background: red; width: 441.492px; font-size: 18px; font-family: monospace; line-height: 25.6594px; padding-left: 0.05rem;"></div>
+		<div class="hidebox2" style="display: none; height: 25.6563px;"></div>
+		<div class="hidebox" style="word-break: break-all; display: none; background: red; width: 437.719px; font-size: 18px; font-family: monospace; line-height: 25.6594px; padding-left: 0.05rem;"></div>
+		<div class="hidebox2" style="display: none; height: 25.6563px;"></div>
+		<div><div id="toast" class="v-toast-default v1-toast v-toast-error" style="display: none;">请输入提交内容</div></div>
+	</body>
+
+</html>
