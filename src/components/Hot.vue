@@ -1,6 +1,7 @@
 <template>
   <div class="mod-hot">
-    <grid :cols="5" :show-lr-borders="false" :show-vertical-dividers="false">
+    <h5 class="hot-title">热门品牌</h5>
+    <grid class="hot-grid" :cols="5" :show-lr-borders="false" :show-vertical-dividers="false">
       <grid-item v-for="(item, index) in list"
                  :key="index"
                  :label="item.carName"
@@ -35,14 +36,28 @@ export default {
 
 <style lang="scss" scoped>
 .mod-hot{
-
+  background: #fff;
+  border-radius: 6px;
+  .hot-title{
+    font-size: 20px;
+    text-align: left;
+    font-weight: normal;
+    padding-left: 22px;
+    padding-top: 18px;
+  }
 }
 </style>
 
 <style lang="scss">
 .mod-hot{
+  .weui-grids:before{
+    border-top: none;
+  }
   .weui-grid:after{
     border-bottom: none;
+  }
+  .weui-grid{
+    padding-top: 12px;
   }
 }
 </style>

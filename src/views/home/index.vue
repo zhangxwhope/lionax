@@ -1,8 +1,10 @@
 <template>
   <div class="mod-home">
     <view-box ref="viewBox">
-      <Hot :list="hot"></Hot>
-      <List></List>
+      <div class="hot-wrap">
+        <hot :list="hot"></hot>
+      </div>
+      <list></list>
     </view-box>
   </div>
 </template>
@@ -45,6 +47,10 @@ export default {
 <style lang="scss" scoped>
 .mod-home{
   height: 100%;
+  background: #FFD301;
+  .hot-wrap{
+    padding: 10px;
+  }
 }
 </style>
 
