@@ -1,7 +1,7 @@
 <template>
   <div class="mod-list">
     <div class="list-wrap">
-      <div class="list-item" v-for="(item, index) in list" :key="index">
+      <div class="list-item" v-for="(item, index) in list" :key="index" :id="item.initial">
         <div class="list-kind">{{ item.initial }}</div>
         <div class="list-detail">
           <div class="detail-item" v-for="(detail, idx) in item.data" :key="idx">

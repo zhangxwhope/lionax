@@ -6,6 +6,7 @@
       </div>
       <list :list="allList"></list>
     </view-box>
+    <anchor :list="allList"></anchor>
   </div>
 </template>
 
@@ -13,6 +14,7 @@
 import { ViewBox } from 'vux'
 import Hot from '@/components/Hot'
 import List from '@/components/List'
+import Anchor from '@/components/Anchor'
 export default {
   name: 'Home',
   data () {
@@ -24,7 +26,8 @@ export default {
   components: {
     ViewBox,
     Hot,
-    List
+    List,
+    Anchor
   },
   created () {
     this.fetchHotData()
@@ -70,6 +73,7 @@ export default {
 
 <style lang="scss" scoped>
 .mod-home{
+  position: relative;
   height: 100%;
   background: #FFD301;
   .hot-wrap{
