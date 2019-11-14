@@ -7,6 +7,7 @@
       <list :list="allList"></list>
     </view-box>
     <anchor :list="allList"></anchor>
+    <popup-view :visibile="visible"></popup-view>
   </div>
 </template>
 
@@ -15,19 +16,22 @@ import { ViewBox } from 'vux'
 import Hot from '@/components/Hot'
 import List from '@/components/List'
 import Anchor from '@/components/Anchor'
+import PopupView from '@/components/PopupView'
 export default {
   name: 'Home',
   data () {
     return {
       hot: [], // 热门品牌
-      allList: [] // 所有列表
+      allList: [], // 所有列表
+      visible: false
     }
   },
   components: {
     ViewBox,
     Hot,
     List,
-    Anchor
+    Anchor,
+    PopupView
   },
   created () {
     this.fetchHotData()
