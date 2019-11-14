@@ -1,7 +1,11 @@
 <template>
   <div class="mod-anchor">
     <div class="anchor-wrap">
-      <div class="anchor-item" v-for="(item, index) in list" :key="index" @click="dumpToPos(item.initial)">
+      <div class="anchor-item"
+           :class="activeAnchor === item.initial ? 'active' : ''"
+           v-for="(item, index) in list"
+           :key="index"
+           @click="dumpToPos(item.initial)">
         <div class="bubble-item">{{ item.initial }}</div>
         <div class="item-wrap">
           <span>{{ item.initial }}</span>
@@ -16,7 +20,9 @@ export default {
   name: 'Anchor',
   data () {
     return {
-
+      activeAnchor: '',
+      scrollTop: '',
+      listHeight: []
     }
   },
   props: {
@@ -27,9 +33,44 @@ export default {
       }
     }
   },
+  mounted () {
+    window.addEventListener('scroll', () => {
+      this.scrollTop = document.documentElement.scrollTop
+    })
+    this.calculateHeight()
+  },
+  watch: {
+    list () {
+      this.calculateHeight()
+    },
+    scrollTop (val) {
+      this.setHighlight(val)
+    }
+  },
   methods: {
     dumpToPos (item) {
-      console.log(item)
+      this.activeAnchor = item
+      let obj = document.getElementById(item)
+      let oPos = obj.offsetTop
+      document.documentElement.scrollTop = oPos
+      document.body.scrollTop = oPos
+    },
+    setHighlight (val) {
+      for (let i = 0; i < this.listHeight.length - 1; i++) { // 循环看落在哪一个区间
+        let height1 = this.listHeight[i]
+        let height2 = this.listHeight[i + 1]
+        if (!height2 || (val >= height1 && val < height2)) {
+          this.activeAnchor = this.list[i].initial
+        }
+      }
+    },
+    calculateHeight () {
+      this.listHeight = []
+      for (let i = 0; i < this.list.length; i++) {
+        let item = this.list[i]
+        let height = document.getElementById(item.initial).offsetTop
+        this.listHeight.push(height)
+      }
     }
   }
 }
@@ -51,19 +92,20 @@ export default {
       color: #fff;
       border-radius: 43%;
     }
-    .bubble-item{    width: 35px;
+    .bubble-item{
+      width: 35px;
       height: 35px;
       color: #fff;
       background: #FFD301;
       position: absolute;
-      left: -40px;
+      left: -50px;
       border-radius: 100%;
       text-align: center;
       line-height: 35px;
       top: 50%;
       transform: translateY(-50%);
       font-size: 20px;
-      // display: none;
+      display: none;
       &:after{
         content: '';
         height: 0;
