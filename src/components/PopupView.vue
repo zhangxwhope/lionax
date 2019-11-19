@@ -1,6 +1,6 @@
 <template>
   <div class="mod-popup">
-    <popup :value="visible" :hide-on-blur="false">
+    <popup :value="isShow" :hide-on-blur="false">
       Popup
     </popup>
   </div>
@@ -25,7 +25,7 @@ export default {
         return []
       }
     },
-    visible: {
+    isShow: {
       type: Boolean,
       default: false
     }

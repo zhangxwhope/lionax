@@ -1,13 +1,11 @@
 <template>
   <div class="mod-home">
-    <view-box ref="viewBox">
-      <div class="hot-wrap">
+    <div class="hot-wrap">
         <hot :list="hot"></hot>
-      </div>
-      <list :list="allList"></list>
-    </view-box>
+    </div>
+    <list :list="allList" @showPopup="showPopup"></list>
     <anchor :list="allList"></anchor>
-    <popup-view :visibile="visible"></popup-view>
+    <popup-view :isShow="visible" :list="modelList"></popup-view>
   </div>
 </template>
 
@@ -23,7 +21,8 @@ export default {
     return {
       hot: [], // 热门品牌
       allList: [], // 所有列表
-      visible: false
+      visible: false, // popup显示标志
+      modelList: [] // 二级列表
     }
   },
   components: {
@@ -70,6 +69,11 @@ export default {
         }
       })
       this.allList = res
+    },
+    // 显示popup
+    showPopup (list) {
+      this.visible = true
+      this.modelList = list
     }
   }
 }
