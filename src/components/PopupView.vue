@@ -3,13 +3,23 @@
     <popup height="50%" :value="isShow" :hide-on-blur="false">
       <div class="popup-header">
         <div class="breadcrumb-nav">
-          奥迪
+          <span v-for="(nav, index) in breadcrumbNav" :key="nav.level" class="nav-item">
+            <span class="nav-name"
+                  :class="index !== breadcrumbNav.length - 1 ? 'active' : ''"
+                  @click="backToPrev(nav)">
+              {{ nav.name }}
+            </span>
+            <span v-if="index !== breadcrumbNav.length - 1" class="nav-arrow">></span>
+          </span>
         </div>
         <div class="popup-close">X</div>
       </div>
       <div class="popup-content">
-        <div class="popup-item" v-for="(item, index) in list" :key="index">
-          <span>{{ item.modelName }}</span>
+        <div class="popup-item"
+             v-for="(item, index) in isSecond ? list : (isThird ? salesList : yearList)"
+             :key="index"
+             @click="getList(item)">
+          <span>{{ isSecond ? item.modelName : (isThird ? item.salesName : item.yearName) }}</span>
           <span>></span>
         </div>
       </div>
@@ -23,7 +33,12 @@ export default {
   name: 'PopupView',
   data () {
     return {
-
+      salesList: [], // 三级列表
+      modelId: '', // 当前二级
+      yearList: [], // 四级列表
+      salesId: '', // 当前三级
+      yearId: '', // 当前四级
+      breadcrumbNav: [] // 面包屑导航数据
     }
   },
   components: {
@@ -39,6 +54,109 @@ export default {
     isShow: {
       type: Boolean,
       default: false
+    },
+    current: {
+      type: Object,
+      default () {
+        return {}
+      }
+    }
+  },
+  computed: {
+    // 当前是否显示二级列表
+    isSecond () {
+      return this.modelId === ''
+    },
+    // 当前是否显示三级列表
+    isThird () {
+      return this.modelId !== '' && this.salesId === ''
+    }
+  },
+  watch: {
+    isShow (val) {
+      if (val) {
+        this.initBreadcrumbNav()
+      }
+    }
+  },
+  methods: {
+    // 获取对应列表数据
+    getList (item) {
+      let { modelId, salesId, yearId } = item
+      if (yearId) {
+        this.yearId = yearId
+        // 跳转至详情页面
+        return
+      }
+      if (salesId) {
+        this.getYearList(item)
+        return
+      }
+      if (modelId) {
+        this.getSalesList(item)
+      }
+    },
+    async getSalesList (item) {
+      let { modelId, modelName } = item
+      this.modelId = modelId
+      this.breadcrumbNav.push({
+        id: modelId,
+        name: modelName,
+        level: 2
+      })
+      await this.fetchSalesList()
+    },
+    // 根据modelId获取salesList
+    async fetchSalesList () {
+      await this.$http.get(`api/rest/lionax/selectSalesListByModelId/${this.modelId}`).then(({data}) => {
+        console.log(data)
+        this.salesList = data
+      })
+    },
+    async getYearList (item) {
+      let { salesId, salesName } = item
+      this.salesId = salesId
+      this.breadcrumbNav.push({
+        id: salesId,
+        name: salesName,
+        level: 3
+      })
+      await this.fetchYearList()
+    },
+    // 根据salesId获取yearList
+    async fetchYearList () {
+      await this.$http.get(`api/rest/lionax/selectYearListBySalesId/${this.salesId}`).then(({data}) => {
+        console.log(data)
+        this.yearList = data
+      })
+    },
+    // 初始化设置面包屑导航数据
+    initBreadcrumbNav () {
+      let { carId, carName } = this.current
+      this.breadcrumbNav.push({
+        id: carId,
+        name: carName,
+        level: 1
+      })
+    },
+    // 删除对应的面包屑中的数据层
+    deleteBreadcrumbNav (level) {
+      this.breadcrumbNav = this.breadcrumbNav.filter(item => item.level <= level)
+    },
+    // 面包屑导航点击返回上一层
+    backToPrev (nav) {
+      let { level } = nav
+      switch (level) {
+        case 1:
+          this.modelId = ''
+          break
+        case 2:
+          this.salesId = ''
+          break
+        case 3:
+          break
+      }
+      this.deleteBreadcrumbNav(level)
     }
   }
 }
@@ -66,6 +184,19 @@ export default {
     align-items: center;
     min-height: 56px;
   }
+  .breadcrumb-nav{
+    text-align: left;
+    font-size: 14px;
+    color: #555;
+  }
+  .nav-arrow{
+    margin: 0 5px;
+  }
+  .nav-name{
+    &.active{
+      color: #dd1d21;
+    }
+  }
 }
 </style>
 
@@ -74,6 +205,7 @@ export default {
   .vux-popup-dialog{
     box-sizing: border-box;
     padding: 0 10px;
+    background: #fff;
   }
 }
 </style>

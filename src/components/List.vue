@@ -4,7 +4,7 @@
       <div class="list-item" v-for="(item, index) in list" :key="index" :id="item.initial">
         <div class="list-kind">{{ item.initial }}</div>
         <div class="list-detail">
-          <div class="detail-item" v-for="(detail, idx) in item.data" :key="idx" @click="getModelList(detail.carId)">
+          <div class="detail-item" v-for="(detail, idx) in item.data" :key="idx" @click="getModelList(detail)">
             <img class="detail-img" :src="`http://www.l-lionax.com${detail.carLog}`" alt="icon">
             <div class="detail-name">{{ detail.carName }}</div>
           </div>
@@ -19,7 +19,7 @@ export default {
   name: 'List',
   data () {
     return {
-      carId: '', // 当前一级
+      current: '', // 当前一级
       modelList: [] // 二级列表
     }
   },
@@ -32,14 +32,14 @@ export default {
     }
   },
   methods: {
-    async getModelList (carId) {
-      this.carId = carId
+    async getModelList (item) {
+      this.current = item
       await this.fetchModelList()
-      this.$emit('showPopup', this.modelList)
+      this.$emit('showPopup', { list: this.modelList, current: item })
     },
     // 根据carId获取modelList
     async fetchModelList () {
-      await this.$http.get(`api/rest/lionax/selectModelListByCarId/${this.carId}`).then(({data}) => {
+      await this.$http.get(`api/rest/lionax/selectModelListByCarId/${this.current.carId}`).then(({data}) => {
         console.log(data)
         this.modelList = data
       })

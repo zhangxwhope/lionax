@@ -5,7 +5,7 @@
     </div>
     <list :list="allList" @showPopup="showPopup"></list>
     <anchor :list="allList"></anchor>
-    <popup-view :isShow="visible" :list="modelList"></popup-view>
+    <popup-view :isShow="visible" :current="current" :list="modelList"></popup-view>
   </div>
 </template>
 
@@ -22,7 +22,8 @@ export default {
       hot: [], // 热门品牌
       allList: [], // 所有列表
       visible: false, // popup显示标志
-      modelList: [] // 二级列表
+      modelList: [], // 二级列表
+      current: {} // 当前选中项
     }
   },
   components: {
@@ -71,9 +72,10 @@ export default {
       this.allList = res
     },
     // 显示popup
-    showPopup (list) {
+    showPopup ({ list = [], current = {} }) {
       this.visible = true
       this.modelList = list
+      this.current = current
     }
   }
 }
