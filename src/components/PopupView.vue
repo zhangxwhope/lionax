@@ -1,6 +1,10 @@
 <template>
   <div class="mod-popup">
-    <popup height="50%" :value="isShow" :hide-on-blur="false">
+    <popup height="50%"
+          :value="isShow"
+          :hide-on-blur="false"
+          :should-rerender-on-show="true"
+          @on-hide="clearData">
       <div class="popup-header">
         <div class="breadcrumb-nav">
           <span v-for="(nav, index) in breadcrumbNav" :key="nav.level" class="nav-item">
@@ -12,7 +16,7 @@
             <span v-if="index !== breadcrumbNav.length - 1" class="nav-arrow">></span>
           </span>
         </div>
-        <div class="popup-close">X</div>
+        <div class="popup-close" @click="closePopup">X</div>
       </div>
       <div class="popup-content">
         <div class="popup-item"
@@ -149,6 +153,7 @@ export default {
       switch (level) {
         case 1:
           this.modelId = ''
+          this.salesId = ''
           break
         case 2:
           this.salesId = ''
@@ -157,6 +162,19 @@ export default {
           break
       }
       this.deleteBreadcrumbNav(level)
+    },
+    // 关闭弹框
+    closePopup () {
+      this.$emit('close')
+    },
+    // 清除数据
+    clearData () {
+      this.breadcrumbNav = []
+      this.salesList = []
+      this.yearList = []
+      this.modelId = ''
+      this.salesId = ''
+      this.yearId = ''
     }
   }
 }
@@ -183,6 +201,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     min-height: 56px;
+    font-size: 18px;
   }
   .breadcrumb-nav{
     text-align: left;

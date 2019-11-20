@@ -5,7 +5,7 @@
     </div>
     <list :list="allList" @showPopup="showPopup"></list>
     <anchor :list="allList"></anchor>
-    <popup-view :isShow="visible" :current="current" :list="modelList"></popup-view>
+    <popup-view :isShow="visible" :current="current" :list="modelList" @close="closePopup"></popup-view>
   </div>
 </template>
 
@@ -76,6 +76,10 @@ export default {
       this.visible = true
       this.modelList = list
       this.current = current
+    },
+    // 关闭popup
+    closePopup () {
+      this.visible = false
     }
   }
 }
