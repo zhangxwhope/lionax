@@ -11,7 +11,7 @@ export default new Router({
       component: () => import('@/views/home')
     },
     {
-      path: '/detail',
+      path: '/detail/:yearId',
       name: 'Detail',
       component: () => import('@/views/detail')
     }

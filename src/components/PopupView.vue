@@ -90,6 +90,7 @@ export default {
       if (yearId) {
         this.yearId = yearId
         // 跳转至详情页面
+        this.$router.push(`/detail/${yearId}`)
         return
       }
       if (salesId) {
