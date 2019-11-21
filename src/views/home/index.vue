@@ -1,5 +1,5 @@
 <template>
-  <div class="mod-home">
+  <div class="mod-home" :class="visible ? 'noscroll' : ''">
     <div class="hot-wrap">
         <hot :list="hot" @showPopup="showPopup"></hot>
     </div>
@@ -119,6 +119,10 @@ export default {
   position: relative;
   height: 100%;
   background: #FFD301;
+  &.noscroll{
+    height: 100vh;
+    overflow: hidden;
+  }
   .hot-wrap{
     padding: 10px;
     margin-bottom: 10px;

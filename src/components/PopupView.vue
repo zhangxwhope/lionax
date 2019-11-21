@@ -1,6 +1,6 @@
 <template>
   <div class="mod-popup">
-    <popup height="50%"
+    <popup height="60%"
           :value="isShow"
           :hide-on-blur="false"
           :should-rerender-on-show="true"
