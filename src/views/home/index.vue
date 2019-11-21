@@ -6,11 +6,13 @@
     <list :list="allList" @showPopup="showPopup"></list>
     <anchor :list="allList"></anchor>
     <popup-view :isShow="visible" :current="current" :list="modelList" @close="closePopup"></popup-view>
+    <loading :show="isLoading" :text="loadingText"></loading>
   </div>
 </template>
 
 <script>
-import { ViewBox } from 'vux'
+import { mapState, mapMutations } from 'vuex'
+import { ViewBox, Loading } from 'vux'
 import Hot from '@/components/Hot'
 import List from '@/components/List'
 import Anchor from '@/components/Anchor'
@@ -28,26 +30,41 @@ export default {
   },
   components: {
     ViewBox,
+    Loading,
     Hot,
     List,
     Anchor,
     PopupView
   },
+  computed: {
+    ...mapState('vux', [
+      'isLoading',
+      'loadingText'
+    ])
+  },
   created () {
-    this.fetchHotData()
-    this.fetchListData()
+    this.fetchData()
   },
   methods: {
+    ...mapMutations('vux', [
+      'updateLoadingStatus'
+    ]),
+    async fetchData () {
+      this.updateLoadingStatus({ isLoading: true })
+      await this.fetchHotData()
+      await this.fetchListData()
+      this.updateLoadingStatus({ isLoading: false })
+    },
     // 获取热门品牌
-    fetchHotData () {
-      this.$http.get('api/rest/lionax/selectHotCar').then(({data}) => {
+    async fetchHotData () {
+      await this.$http.get('api/rest/lionax/selectHotCar').then(({data}) => {
         console.log(data)
         this.hot = data
       })
     },
     // 获取列表数据
-    fetchListData () {
-      this.$http.get('api/rest/lionax/selectAllCar').then(({data}) => {
+    async fetchListData () {
+      await this.$http.get('api/rest/lionax/selectAllCar').then(({data}) => {
         console.log(data)
         // 将所有数据按照字母分组
         this.initAllList(data)
