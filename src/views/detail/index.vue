@@ -12,11 +12,11 @@
         </div>
         <div class="content-short">
           <div class="short-item">
-            <img class="item-img" :src="`http://www.l-lionax.com${detail.lowerImage}`" alt="img">
+            <img class="item-img" :src="`${rootPath}${detail.lowerImage}`" alt="img">
             <p class="item-name">{{ detail.lower }}</p>
           </div>
           <div class="short-item">
-            <img class="item-img" :src="`http://www.l-lionax.com${detail.highImage}`" alt="img">
+            <img class="item-img" :src="`${rootPath}${detail.highImage}`" alt="img">
             <p class="item-name">
               <span>最佳</span>
               {{ detail.high }}
@@ -40,7 +40,8 @@ export default {
   },
   computed: {
     ...mapState([
-      'detailNav'
+      'detailNav',
+      'rootPath'
     ])
   },
   created () {

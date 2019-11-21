@@ -5,7 +5,7 @@
         <div class="list-kind">{{ item.initial }}</div>
         <div class="list-detail">
           <div class="detail-item" v-for="(detail, idx) in item.data" :key="idx" @click="getModelList(detail)">
-            <img class="detail-img" :src="`http://www.l-lionax.com${detail.carLog}`" alt="icon">
+            <img class="detail-img" :src="`${rootPath}${detail.carLog}`" alt="icon">
             <div class="detail-name">{{ detail.carName }}</div>
           </div>
         </div>
@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'List',
   data () {
@@ -30,6 +31,11 @@ export default {
         return []
       }
     }
+  },
+  computed: {
+    ...mapState([
+      'rootPath'
+    ])
   },
   methods: {
     async getModelList (item) {

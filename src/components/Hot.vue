@@ -5,12 +5,13 @@
       <grid-item v-for="(item, index) in list"
                  :key="index"
                  :label="item.carName"
-                 :icon="`http://www.l-lionax.com${item.carLog}`"></grid-item>
+                 :icon="`${rootPath}${item.carLog}`"></grid-item>
     </grid>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import { Grid, GridItem } from 'vux'
 export default {
   name: 'Hot',
@@ -30,6 +31,11 @@ export default {
   components: {
     Grid,
     GridItem
+  },
+  computed: {
+    ...mapState([
+      'rootPath'
+    ])
   }
 }
 </script>
