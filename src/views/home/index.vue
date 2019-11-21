@@ -37,6 +37,9 @@ export default {
     PopupView
   },
   computed: {
+    ...mapState([
+      'baseUrl'
+    ]),
     ...mapState('vux', [
       'isLoading',
       'loadingText'
@@ -57,14 +60,14 @@ export default {
     },
     // 获取热门品牌
     async fetchHotData () {
-      await this.$http.get('api/rest/lionax/selectHotCar').then(({data}) => {
+      await this.$http.get(`${this.baseUrl}/rest/lionax/selectHotCar`).then(({data}) => {
         console.log(data)
         this.hot = data
       })
     },
     // 获取列表数据
     async fetchListData () {
-      await this.$http.get('api/rest/lionax/selectAllCar').then(({data}) => {
+      await this.$http.get(`${this.baseUrl}/rest/lionax/selectAllCar`).then(({data}) => {
         console.log(data)
         // 将所有数据按照字母分组
         this.initAllList(data)
@@ -105,7 +108,7 @@ export default {
     },
     // 根据carId获取modelList
     async fetchModelList () {
-      await this.$http.get(`api/rest/lionax/selectModelListByCarId/${this.current.carId}`).then(({data}) => {
+      await this.$http.get(`${this.baseUrl}/rest/lionax/selectModelListByCarId/${this.current.carId}`).then(({data}) => {
         console.log(data)
         this.modelList = data
       })

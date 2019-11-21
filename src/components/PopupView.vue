@@ -72,7 +72,8 @@ export default {
   },
   computed: {
     ...mapState([
-      'rootPath'
+      'rootPath',
+      'baseUrl'
     ]),
     // 当前是否显示二级列表
     isSecond () {
@@ -129,7 +130,7 @@ export default {
     },
     // 根据modelId获取salesList
     async fetchSalesList () {
-      await this.$http.get(`api/rest/lionax/selectSalesListByModelId/${this.modelId}`).then(({data}) => {
+      await this.$http.get(`${this.baseUrl}/rest/lionax/selectSalesListByModelId/${this.modelId}`).then(({data}) => {
         console.log(data)
         this.salesList = data
       })
@@ -147,7 +148,7 @@ export default {
     },
     // 根据salesId获取yearList
     async fetchYearList () {
-      await this.$http.get(`api/rest/lionax/selectYearListBySalesId/${this.salesId}`).then(({data}) => {
+      await this.$http.get(`${this.baseUrl}/rest/lionax/selectYearListBySalesId/${this.salesId}`).then(({data}) => {
         console.log(data)
         this.yearList = data
       })

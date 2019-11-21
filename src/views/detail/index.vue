@@ -46,7 +46,8 @@ export default {
   computed: {
     ...mapState([
       'detailNav',
-      'rootPath'
+      'rootPath',
+      'baseUrl'
     ]),
     ...mapState('vux', [
       'isLoading',
@@ -68,7 +69,7 @@ export default {
     // 根据yearId获取详情数据
     async fetchDetailByYearId () {
       this.updateLoadingStatus({ isLoading: true })
-      await this.$http.get(`api/rest/lionax/selectEngineOilListByYearId/${this.yearId}`).then(({data}) => {
+      await this.$http.get(`${this.baseUrl}/rest/lionax/selectEngineOilListByYearId/${this.yearId}`).then(({data}) => {
         console.log(data)
         this.detail = data[0] || {}
       })

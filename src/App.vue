@@ -5,8 +5,29 @@
 </template>
 
 <script>
+import { mapState, mapMutations } from 'vuex'
 export default {
-  name: 'App'
+  name: 'App',
+  data () {
+    return {
+
+    }
+  },
+  computed: {
+    ...mapState([
+      'rootPath'
+    ])
+  },
+  created () {
+    const isDev = process.env.NODE_ENV === 'development'
+    const url = isDev ? 'api' : this.rootPath
+    this.updateBaseUrl(url)
+  },
+  methods: {
+    ...mapMutations([
+      'updateBaseUrl'
+    ])
+  }
 }
 </script>
 
