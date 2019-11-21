@@ -11,11 +11,13 @@
         </div>
       </div>
     </div>
+    <loading :show="isLoading" :text="loadingText"></loading>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { Loading } from 'vux'
+import { mapState, mapMutations } from 'vuex'
 export default {
   name: 'List',
   data () {
@@ -32,15 +34,27 @@ export default {
       }
     }
   },
+  components: {
+    Loading
+  },
   computed: {
     ...mapState([
       'rootPath'
+    ]),
+    ...mapState('vux', [
+      'isLoading',
+      'loadingText'
     ])
   },
   methods: {
+    ...mapMutations('vux', [
+      'updateLoadingStatus'
+    ]),
     async getModelList (item) {
       this.current = item
+      this.updateLoadingStatus({ isLoading: true })
       await this.fetchModelList()
+      this.updateLoadingStatus({ isLoading: false })
       this.$emit('showPopup', { list: this.modelList, current: item })
     },
     // 根据carId获取modelList
