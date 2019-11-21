@@ -11,6 +11,7 @@
             <span class="nav-name"
                   :class="index !== breadcrumbNav.length - 1 ? 'active' : ''"
                   @click="backToPrev(nav)">
+              <img v-if="index === 0 && nav.img" class="bread-nav-img" :src="`${rootPath}${nav.img}`" alt="icon">
               {{ nav.name }}
             </span>
             <span v-if="index !== breadcrumbNav.length - 1" class="nav-arrow">></span>
@@ -32,7 +33,7 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 import { Popup } from 'vux'
 export default {
   name: 'PopupView',
@@ -68,6 +69,9 @@ export default {
     }
   },
   computed: {
+    ...mapState([
+      'rootPath'
+    ]),
     // 当前是否显示二级列表
     isSecond () {
       return this.modelId === ''
@@ -116,6 +120,7 @@ export default {
       this.breadcrumbNav.push({
         id: modelId,
         name: modelName,
+        img: '',
         level: 2
       })
       await this.fetchSalesList()
@@ -133,6 +138,7 @@ export default {
       this.breadcrumbNav.push({
         id: salesId,
         name: salesName,
+        img: '',
         level: 3
       })
       await this.fetchYearList()
@@ -146,10 +152,11 @@ export default {
     },
     // 初始化设置面包屑导航数据
     initBreadcrumbNav () {
-      let { carId, carName } = this.current
+      let { carId, carName, carLog } = this.current
       this.breadcrumbNav.push({
         id: carId,
         name: carName,
+        img: carLog,
         level: 1
       })
     },
@@ -225,6 +232,10 @@ export default {
     &.active{
       color: #dd1d21;
     }
+  }
+  .bread-nav-img{
+    width: 30px;
+    vertical-align: middle;
   }
 }
 </style>
