@@ -32,6 +32,7 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 import { Popup } from 'vux'
 export default {
   name: 'PopupView',
@@ -84,12 +85,20 @@ export default {
     }
   },
   methods: {
+    ...mapMutations([
+      'updateDetailNav'
+    ]),
     // 获取对应列表数据
     getList (item) {
       let { modelId, salesId, yearId } = item
       if (yearId) {
         this.yearId = yearId
         // 跳转至详情页面
+        const detailNav = this.breadcrumbNav.filter((nav, index) => index <= 1).map(nav => nav.name)
+        this.updateDetailNav({
+          first: detailNav[0] || '',
+          second: detailNav[1] || ''
+        })
         this.$router.push(`/detail/${yearId}`)
         return
       }

@@ -1,7 +1,8 @@
 <template>
   <div class="mod-detail">
-    <div class="detail-header">
-      奥迪 >
+    <div class="detail-header" @click="dumpToHome">
+      <span>{{ detailNav.first }} - {{ detailNav.second }}</span>
+      <span class="detail-arrow">＞</span>
     </div>
     <div class="detail-content">
       <div class="content-wrap">
@@ -28,6 +29,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'Detail',
   data () {
@@ -35,6 +37,11 @@ export default {
       yearId: '',
       detail: {}
     }
+  },
+  computed: {
+    ...mapState([
+      'detailNav'
+    ])
   },
   created () {
     this.yearId = this.$route.params.yearId || ''
@@ -51,6 +58,10 @@ export default {
         console.log(data)
         this.detail = data[0] || {}
       })
+    },
+    // 跳转回首页
+    dumpToHome () {
+      this.$router.push('/')
     }
   }
 }
