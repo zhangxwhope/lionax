@@ -148,7 +148,11 @@ export default {
     margin-top: 20px;
   }
   .short-item{
-    width: 180px;
+    flex: 1;
+    max-width: 200px;
+    &:last-child{
+      margin-left: 10px;
+    }
   }
   .item-img{
     width: 100%;
