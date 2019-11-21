@@ -6,26 +6,28 @@
           :should-rerender-on-show="true"
           @on-hide="clearData">
       <div class="popup-header">
-        <div class="breadcrumb-nav">
-          <span v-for="(nav, index) in breadcrumbNav" :key="nav.level" class="nav-item">
-            <span class="nav-name"
-                  :class="index !== breadcrumbNav.length - 1 ? 'active' : ''"
-                  @click="backToPrev(nav)">
-              <img v-if="index === 0 && nav.img" class="bread-nav-img" :src="`${rootPath}${nav.img}`" alt="icon">
-              {{ nav.name }}
+        <div class="bread-nav-wrap">
+          <img v-if="breadcrumbNav[0] && breadcrumbNav[0].img" class="bread-nav-img" :src="`${rootPath}${breadcrumbNav[0].img}`" alt="icon">
+          <div class="breadcrumb-nav">
+            <span v-for="(nav, index) in breadcrumbNav" :key="nav.level" class="nav-item">
+              <span class="nav-name"
+                    :class="index !== breadcrumbNav.length - 1 ? 'active' : ''"
+                    @click="backToPrev(nav)">
+                {{ nav.name }}
+              </span>
+              <span v-if="index !== breadcrumbNav.length - 1" class="nav-arrow">＞</span>
             </span>
-            <span v-if="index !== breadcrumbNav.length - 1" class="nav-arrow">></span>
-          </span>
+          </div>
         </div>
-        <div class="popup-close" @click="closePopup">X</div>
+        <div class="popup-close" @click="closePopup">✕</div>
       </div>
       <div class="popup-content">
         <div class="popup-item"
              v-for="(item, index) in isSecond ? list : (isThird ? salesList : yearList)"
              :key="index"
              @click="getList(item)">
-          <span>{{ isSecond ? item.modelName : (isThird ? item.salesName : item.yearName) }}</span>
-          <span>></span>
+          <span class="popup-item-name">{{ isSecond ? item.modelName : (isThird ? item.salesName : item.yearName) }}</span>
+          <span class="popup-item-arrow">＞</span>
         </div>
       </div>
     </popup>
@@ -207,6 +209,7 @@ export default {
     align-items: center;
     min-height: 46px;
     // line-height: 46px;
+    border-bottom: 1px solid #ddd;
   }
   .popup-content{
     height: calc(100% - 46px);
@@ -219,6 +222,10 @@ export default {
     align-items: center;
     min-height: 56px;
     font-size: 18px;
+    border-bottom: 1px solid #ddd;
+    &:last-child{
+      border-bottom: none;
+    }
   }
   .breadcrumb-nav{
     text-align: left;
@@ -227,15 +234,32 @@ export default {
   }
   .nav-arrow{
     margin: 0 5px;
+    color: #ccc;
   }
   .nav-name{
     &.active{
       color: #dd1d21;
     }
   }
+  .bread-nav-wrap{
+    display: flex;
+    align-items: center;
+  }
   .bread-nav-img{
-    width: 30px;
+    width: 20px;
+    height: 20px;
     vertical-align: middle;
+    margin-right: 5px;
+  }
+  .popup-close{
+    margin-left: 10px;
+  }
+  .popup-close, .popup-item-arrow{
+    color: #ccc;
+    font-size: 14px;
+  }
+  .popup-item-name{
+    text-align: left;
   }
 }
 </style>
