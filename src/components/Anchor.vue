@@ -6,7 +6,7 @@
            v-for="(item, index) in list"
            :key="index"
            @click="dumpToPos(item.initial)">
-        <div class="bubble-item">{{ item.initial }}</div>
+        <div class="bubble-item" :class="activeAnchor === item.initial && showBubble ? 'show-bubble' : ''">{{ item.initial }}</div>
         <div class="item-wrap">
           <span>{{ item.initial }}</span>
         </div>
@@ -22,7 +22,8 @@ export default {
     return {
       activeAnchor: '',
       scrollTop: '',
-      listHeight: []
+      listHeight: [],
+      showBubble: false
     }
   },
   props: {
@@ -50,10 +51,14 @@ export default {
   methods: {
     dumpToPos (item) {
       this.activeAnchor = item
+      this.showBubble = true
       let obj = document.getElementById(item)
       let oPos = obj.offsetTop
       document.documentElement.scrollTop = oPos
       document.body.scrollTop = oPos
+      setTimeout(() => {
+        this.showBubble = false
+      }, 500)
     },
     setHighlight (val) {
       for (let i = 0; i < this.listHeight.length - 1; i++) { // 循环看落在哪一个区间
@@ -106,6 +111,9 @@ export default {
       transform: translateY(-50%);
       font-size: 20px;
       display: none;
+      &.show-bubble{
+        display: block;
+      }
       &:after{
         content: '';
         height: 0;
