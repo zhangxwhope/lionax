@@ -1,7 +1,7 @@
 <template>
   <div class="mod-home">
     <div class="hot-wrap">
-        <hot :list="hot"></hot>
+        <hot :list="hot" @showPopup="showPopup"></hot>
     </div>
     <list :list="allList" @showPopup="showPopup"></list>
     <anchor :list="allList"></anchor>
@@ -89,14 +89,26 @@ export default {
       this.allList = res
     },
     // 显示popup
-    showPopup ({ list = [], current = {} }) {
+    async showPopup (item) {
+      await this.getModelList(item)
       this.visible = true
-      this.modelList = list
-      this.current = current
     },
     // 关闭popup
     closePopup () {
       this.visible = false
+    },
+    async getModelList (item) {
+      this.current = item
+      this.updateLoadingStatus({ isLoading: true })
+      await this.fetchModelList()
+      this.updateLoadingStatus({ isLoading: false })
+    },
+    // 根据carId获取modelList
+    async fetchModelList () {
+      await this.$http.get(`api/rest/lionax/selectModelListByCarId/${this.current.carId}`).then(({data}) => {
+        console.log(data)
+        this.modelList = data
+      })
     }
   }
 }

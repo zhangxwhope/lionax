@@ -3,9 +3,12 @@
     <h5 class="hot-title">热门品牌</h5>
     <grid class="hot-grid" :cols="5" :show-lr-borders="false" :show-vertical-dividers="false">
       <grid-item v-for="(item, index) in list"
-                 :key="index"
-                 :label="item.carName"
-                 :icon="`${rootPath}${item.carLog}`"></grid-item>
+                 :key="index">
+        <div class="grid-item" @click="showPopup(item)">
+          <img class="grid-img" :src="`${rootPath}${item.carLog}`" alt="icon">
+          <div class="grid-name">{{ item.carName }}</div>
+        </div>
+      </grid-item>
     </grid>
   </div>
 </template>
@@ -36,6 +39,11 @@ export default {
     ...mapState([
       'rootPath'
     ])
+  },
+  methods: {
+    showPopup (item) {
+      this.$emit('showPopup', item)
+    }
   }
 }
 </script>
@@ -50,6 +58,13 @@ export default {
     font-weight: normal;
     padding-left: 22px;
     padding-top: 18px;
+  }
+  .grid-img{
+    width: 36px;
+  }
+  .grid-name{
+    color: #555;
+    font-size: 14px;
   }
 }
 </style>
