@@ -1,7 +1,8 @@
 const vux = {
   namespaced: true,
   state: {
-    isLoading: false
+    isLoading: false,
+    loadingText: '加载中...'
   },
   getters: {
 

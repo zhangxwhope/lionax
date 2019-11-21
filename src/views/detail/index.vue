@@ -12,11 +12,11 @@
         </div>
         <div class="content-short">
           <div class="short-item">
-            <img class="item-img" :src="`${rootPath}${detail.lowerImage}`" alt="img">
+            <img class="item-img" :src="showImage(detail.lowerImage)" alt="img">
             <p class="item-name">{{ detail.lower }}</p>
           </div>
           <div class="short-item">
-            <img class="item-img" :src="`${rootPath}${detail.highImage}`" alt="img">
+            <img class="item-img" :src="showImage(detail.highImage)" alt="img">
             <p class="item-name">
               <span>最佳</span>
               {{ detail.high }}
@@ -25,11 +25,13 @@
         </div>
       </div>
     </div>
+    <loading :show="isLoading" :text="loadingText"></loading>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
+import { Loading } from 'vux'
 export default {
   name: 'Detail',
   data () {
@@ -38,10 +40,17 @@ export default {
       detail: {}
     }
   },
+  components: {
+    Loading
+  },
   computed: {
     ...mapState([
       'detailNav',
       'rootPath'
+    ]),
+    ...mapState('vux', [
+      'isLoading',
+      'loadingText'
     ])
   },
   created () {
@@ -49,20 +58,29 @@ export default {
     this.fetchDetailByYearId()
   },
   methods: {
+    ...mapMutations('vux', [
+      'updateLoadingStatus'
+    ]),
     // 获取详情
     getDetail () {
 
     },
     // 根据yearId获取详情数据
     async fetchDetailByYearId () {
+      this.updateLoadingStatus({ isLoading: true })
       await this.$http.get(`api/rest/lionax/selectEngineOilListByYearId/${this.yearId}`).then(({data}) => {
         console.log(data)
         this.detail = data[0] || {}
       })
+      this.updateLoadingStatus({ isLoading: false })
     },
     // 跳转回首页
     dumpToHome () {
       this.$router.push('/')
+    },
+    // 图片展示
+    showImage (img) {
+      return img ? `${this.rootPath}${img}` : ''
     }
   }
 }

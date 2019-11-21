@@ -24,6 +24,9 @@ html, body {
   text-align: center;
   color: #2c3e50;
 }
+.weui-mask_transparent{
+  background: #fefefe;
+}
 </style>
 
 <style lang="less">
