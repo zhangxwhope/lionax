@@ -23,13 +23,18 @@
         <!-- <div class="popup-close vux-close" @click="closePopup"></div> -->
       </div>
       <div class="popup-content">
-        <div class="popup-item"
-             v-for="(item, index) in isSecond ? list : (isThird ? salesList : yearList)"
-             :key="index"
-             @click="getList(item)">
-          <span class="popup-item-name">{{ isSecond ? item.modelName : (isThird ? item.salesName : item.yearName) }}</span>
-          <!-- <span class="popup-item-arrow">＞</span> -->
-          <x-icon class="popup-item-arrow" type="ios-arrow-forward"></x-icon>
+        <template v-if="!loading">
+          <div class="popup-item"
+              v-for="(item, index) in isSecond ? list : (isThird ? salesList : yearList)"
+              :key="index"
+              @click="getList(item)">
+            <span class="popup-item-name">{{ isSecond ? item.modelName : (isThird ? item.salesName : item.yearName) }}</span>
+            <!-- <span class="popup-item-arrow">＞</span> -->
+            <x-icon class="popup-item-arrow" type="ios-arrow-forward"></x-icon>
+          </div>
+        </template>
+        <div v-else class="loading-wrap">
+          <spinner type="bubbles"></spinner>
         </div>
       </div>
     </popup>
@@ -38,7 +43,7 @@
 
 <script>
 import { mapState, mapMutations } from 'vuex'
-import { Popup } from 'vux'
+import { Popup, Spinner } from 'vux'
 export default {
   name: 'PopupView',
   data () {
@@ -48,11 +53,13 @@ export default {
       yearList: [], // 四级列表
       salesId: '', // 当前三级
       yearId: '', // 当前四级
-      breadcrumbNav: [] // 面包屑导航数据
+      breadcrumbNav: [], // 面包屑导航数据
+      loading: false // 下一级加载
     }
   },
   components: {
-    Popup
+    Popup,
+    Spinner
   },
   props: {
     list: {
@@ -98,7 +105,7 @@ export default {
       'updateDetailNav'
     ]),
     // 获取对应列表数据
-    getList (item) {
+    async getList (item) {
       let { modelId, salesId, yearId } = item
       if (yearId) {
         this.yearId = yearId
@@ -112,11 +119,15 @@ export default {
         return
       }
       if (salesId) {
-        this.getYearList(item)
+        this.loading = true
+        await this.getYearList(item)
+        this.loading = false
         return
       }
       if (modelId) {
-        this.getSalesList(item)
+        this.loading = true
+        await this.getSalesList(item)
+        this.loading = false
       }
     },
     async getSalesList (item) {
@@ -229,6 +240,12 @@ export default {
     &:last-child{
       border-bottom: none;
     }
+  }
+  .loading-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
   }
   .breadcrumb-nav{
     text-align: left;
