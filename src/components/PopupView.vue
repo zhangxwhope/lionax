@@ -19,7 +19,7 @@
             </span>
           </div>
         </div>
-        <div class="popup-close" @click="closePopup">✕</div>
+        <div class="popup-close vux-close" @click="closePopup"></div>
       </div>
       <div class="popup-content">
         <div class="popup-item"
