@@ -4,10 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store'
-import { AlertPlugin, ToastPlugin, AjaxPlugin } from 'vux'
+import { AjaxPlugin } from 'vux'
 
-Vue.use(AlertPlugin)
-Vue.use(ToastPlugin)
 Vue.use(AjaxPlugin)
 
 const FastClick = require('fastclick')
