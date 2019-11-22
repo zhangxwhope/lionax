@@ -26,28 +26,33 @@
       </div>
     </div>
     <loading :show="isLoading" :text="loadingText"></loading>
+    <protocal-dialog v-if="!protocalAgree" :visible="visible"></protocal-dialog>
   </div>
 </template>
 
 <script>
 import { mapState, mapMutations } from 'vuex'
 import { Loading } from 'vux'
+import ProtocalDialog from '@/components/ProtocalDialog'
 export default {
   name: 'Detail',
   data () {
     return {
       yearId: '',
-      detail: {}
+      detail: {},
+      visible: false // 弹框是否显示
     }
   },
   components: {
-    Loading
+    Loading,
+    ProtocalDialog
   },
   computed: {
     ...mapState([
       'detailNav',
       'rootPath',
-      'baseUrl'
+      'baseUrl',
+      'protocalAgree'
     ]),
     ...mapState('vux', [
       'isLoading',
@@ -55,6 +60,7 @@ export default {
     ])
   },
   created () {
+    this.visible = true
     this.yearId = this.$route.params.yearId || ''
     this.fetchDetailByYearId()
   },

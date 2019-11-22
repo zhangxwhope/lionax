@@ -12,7 +12,7 @@
 
 <script>
 import { mapState, mapMutations } from 'vuex'
-import { ViewBox, Loading } from 'vux'
+import { Loading } from 'vux'
 import Hot from '@/components/Hot'
 import List from '@/components/List'
 import Anchor from '@/components/Anchor'
@@ -29,7 +29,6 @@ export default {
     }
   },
   components: {
-    ViewBox,
     Loading,
     Hot,
     List,

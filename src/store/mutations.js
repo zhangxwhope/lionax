@@ -6,5 +6,9 @@ export default {
   // 更新baseUrl
   updateBaseUrl (state, url) {
     state.baseUrl = url
+  },
+  // 更新免责声明同意标志
+  updateProtocalAgree (state, agree) {
+    state.protocalAgree = agree
   }
 }
