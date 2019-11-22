@@ -2,7 +2,8 @@
   <div class="mod-detail">
     <div class="detail-header" @click="dumpToHome">
       <span>{{ detailNav.first }} - {{ detailNav.second }}</span>
-      <span class="detail-arrow">＞</span>
+      <!-- <span class="detail-arrow">＞</span> -->
+      <x-icon class="detail-arrow" type="ios-arrow-forward"></x-icon>
     </div>
     <div class="detail-content">
       <div class="content-wrap">
@@ -98,6 +99,8 @@ export default {
   height: 100vh;
   background: #f0eff5;
   .detail-header{
+    display: flex;
+    align-items: center;
     padding: 10px 10px 50px;
     color: #fff;
     font-size: 20px;
@@ -105,6 +108,10 @@ export default {
     background-size: 100% 100%;
     text-align: left;
     font-weight: 800;
+  }
+  .detail-arrow{
+    fill: #fff;
+    margin-left: 5px;
   }
   .detail-content{
     padding: 10px;

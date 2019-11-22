@@ -19,7 +19,8 @@
             </span>
           </div>
         </div>
-        <div class="popup-close vux-close" @click="closePopup"></div>
+        <x-icon class="popup-close" type="ios-close-empty" size="40" @click="closePopup"></x-icon>
+        <!-- <div class="popup-close vux-close" @click="closePopup"></div> -->
       </div>
       <div class="popup-content">
         <div class="popup-item"
@@ -27,7 +28,8 @@
              :key="index"
              @click="getList(item)">
           <span class="popup-item-name">{{ isSecond ? item.modelName : (isThird ? item.salesName : item.yearName) }}</span>
-          <span class="popup-item-arrow">＞</span>
+          <!-- <span class="popup-item-arrow">＞</span> -->
+          <x-icon class="popup-item-arrow" type="ios-arrow-forward"></x-icon>
         </div>
       </div>
     </popup>
@@ -257,6 +259,7 @@ export default {
   }
   .popup-close, .popup-item-arrow{
     color: #ccc;
+    fill: #ccc;
     font-size: 14px;
   }
   .popup-item-name{

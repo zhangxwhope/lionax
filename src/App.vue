@@ -53,5 +53,5 @@ html, body {
 <style lang="less">
 @import '~vux/src/styles/reset.less';
 @import '~vux/src/styles/1px.less';
-@import '~vux/src/styles/close.less';
+// @import '~vux/src/styles/close.less';
 </style>
